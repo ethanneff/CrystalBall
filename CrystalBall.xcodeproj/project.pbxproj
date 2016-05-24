@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67D4F6E71923F1660045095F /* ENCrystalBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D4F6E61923F1660045095F /* ENCrystalBall.m */; };
+		67D4F6E91924666D0045095F /* crystal_ball.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 67D4F6E81924666D0045095F /* crystal_ball.mp3 */; };
+		67D4F6EB192466B10045095F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D4F6EA192466B10045095F /* AudioToolbox.framework */; };
 		67E363031922C4AB009A1048 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E363021922C4AB009A1048 /* Foundation.framework */; };
 		67E363051922C4AB009A1048 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E363041922C4AB009A1048 /* CoreGraphics.framework */; };
 		67E363071922C4AB009A1048 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E363061922C4AB009A1048 /* UIKit.framework */; };
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67D4F6E51923F1660045095F /* ENCrystalBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENCrystalBall.h; sourceTree = "<group>"; };
+		67D4F6E61923F1660045095F /* ENCrystalBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENCrystalBall.m; sourceTree = "<group>"; };
+		67D4F6E81924666D0045095F /* crystal_ball.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crystal_ball.mp3; sourceTree = "<group>"; };
+		67D4F6EA192466B10045095F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		67E362FF1922C4AB009A1048 /* CrystalBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrystalBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E363021922C4AB009A1048 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		67E363041922C4AB009A1048 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D4F6EB192466B10045095F /* AudioToolbox.framework in Frameworks */,
 				67E363051922C4AB009A1048 /* CoreGraphics.framework in Frameworks */,
 				67E363071922C4AB009A1048 /* UIKit.framework in Frameworks */,
 				67E363031922C4AB009A1048 /* Foundation.framework in Frameworks */,
@@ -79,6 +87,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		670531AE1A2BB0BD00730A33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67D4F6E51923F1660045095F /* ENCrystalBall.h */,
+				67D4F6E61923F1660045095F /* ENCrystalBall.m */,
+				67D4F6E81924666D0045095F /* crystal_ball.mp3 */,
+				67E3631A1922C4AB009A1048 /* Images.xcassets */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		670531AF1A2BB0CA00730A33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67E363141922C4AB009A1048 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		670531B01A2BB0D400730A33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				67E363171922C4AB009A1048 /* ENViewController.h */,
+				67E363181922C4AB009A1048 /* ENViewController.m */,
+				67E363111922C4AB009A1048 /* ENAppDelegate.h */,
+				67E363121922C4AB009A1048 /* ENAppDelegate.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		67E362F61922C4AB009A1048 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +139,7 @@
 		67E363011922C4AB009A1048 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67D4F6EA192466B10045095F /* AudioToolbox.framework */,
 				67E363021922C4AB009A1048 /* Foundation.framework */,
 				67E363041922C4AB009A1048 /* CoreGraphics.framework */,
 				67E363061922C4AB009A1048 /* UIKit.framework */,
@@ -112,12 +151,9 @@
 		67E363081922C4AB009A1048 /* CrystalBall */ = {
 			isa = PBXGroup;
 			children = (
-				67E363111922C4AB009A1048 /* ENAppDelegate.h */,
-				67E363121922C4AB009A1048 /* ENAppDelegate.m */,
-				67E363141922C4AB009A1048 /* Main.storyboard */,
-				67E363171922C4AB009A1048 /* ENViewController.h */,
-				67E363181922C4AB009A1048 /* ENViewController.m */,
-				67E3631A1922C4AB009A1048 /* Images.xcassets */,
+				670531AF1A2BB0CA00730A33 /* View */,
+				670531B01A2BB0D400730A33 /* Controller */,
+				670531AE1A2BB0BD00730A33 /* Model */,
 				67E363091922C4AB009A1048 /* Supporting Files */,
 			);
 			path = CrystalBall;
@@ -197,9 +233,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = EN;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Ethan Neff";
 				TargetAttributes = {
+					67E362FE1922C4AB009A1048 = {
+						DevelopmentTeam = PW4Q8885U7;
+					};
 					67E3631F1922C4AB009A1048 = {
 						TestTargetID = 67E362FE1922C4AB009A1048;
 					};
@@ -231,6 +270,7 @@
 			files = (
 				67E3631B1922C4AB009A1048 /* Images.xcassets in Resources */,
 				67E3630D1922C4AB009A1048 /* InfoPlist.strings in Resources */,
+				67D4F6E91924666D0045095F /* crystal_ball.mp3 in Resources */,
 				67E363161922C4AB009A1048 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +292,7 @@
 			files = (
 				67E363191922C4AB009A1048 /* ENViewController.m in Sources */,
 				67E3630F1922C4AB009A1048 /* main.m in Sources */,
+				67D4F6E71923F1660045095F /* ENCrystalBall.m in Sources */,
 				67E363131922C4AB009A1048 /* ENAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +361,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -377,10 +419,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrystalBall/CrystalBall-Prefix.pch";
 				INFOPLIST_FILE = "CrystalBall/CrystalBall-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eneff.app.CrystalBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -390,10 +437,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrystalBall/CrystalBall-Prefix.pch";
 				INFOPLIST_FILE = "CrystalBall/CrystalBall-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eneff.app.CrystalBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -414,6 +466,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "CrystalBallTests/CrystalBallTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethanneff.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -432,6 +485,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrystalBall/CrystalBall-Prefix.pch";
 				INFOPLIST_FILE = "CrystalBallTests/CrystalBallTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethanneff.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -457,6 +511,7 @@
 				67E363331922C4AB009A1048 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67E363341922C4AB009A1048 /* Build configuration list for PBXNativeTarget "CrystalBallTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +520,7 @@
 				67E363361922C4AB009A1048 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
